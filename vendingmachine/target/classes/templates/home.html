@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Vending Machine</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div class="container my-2">
+		<h1>Vending Machine</h1>
+		<table border="1" class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Ürün Adı</th>
+					<th>Fiyat</th>
+					<th>Seçenek</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="product : ${product}">
+					<td th:text="${product.getName}"></td>
+					<td th:text="${product.getPrice}"></td>
+					<td><a th:href="@{/buy/confirm/{id}(id=${product.getId})}"
+						class="btn btn-primary">Buy</a></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		
+		<a th:href="@{/showAddBalancePage}">
+			<button class="btn btn-success">Bakiye Ekle</button>
+		</a>
+		
+		<a th:href="@{/exit}">
+			<button class="btn btn-danger">Çıkış</button>
+		</a>
+		<p th:text="'Bakiyeniz : ' + ${balance}"></p>
+	</div>
+</body>
+</html>

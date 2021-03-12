@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Vending Machine</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Otomat</title>
+</head>
+<body>
+
+	<div class="container my-2">
+		<h1 th:text="${product.getName} +' almak istediğine emin misin?'">Emin
+			misin?</h1>
+
+
+
+		<a th:href="@{/buy/{id}(id=${product.getId})}"
+			class="btn btn-primary">EVET</a> 
+			
+		<a th:href="@{/}"
+			class="btn btn-primary">HAYIR</a>
+
+	</div>
+
+</body>
+</html>

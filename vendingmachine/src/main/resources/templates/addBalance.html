@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Vending Machine</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bakiye Ekle</title>
+</head>
+<body>
+
+
+	<div align="center">
+
+		<h1>Eklenecek bakiye seçiniz</h1>
+
+		<a th:href="@{/addMoney/0.5}">
+			<button class="btn btn-success">50 Kuruş</button>
+		</a> <a th:href="@{/addMoney/1}">
+			<button class="btn btn-success">1 TL</button>
+		</a> <a th:href="@{/addMoney/5}">
+			<button class="btn btn-success">5 TL</button>
+		</a> <a th:href="@{/addMoney/10}">
+			<button class="btn btn-success">10 TL</button>
+		</a>
+	</div>
+
+	<div class="container my-2">
+		<table border="1" class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Bakiyeniz</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td th:text="${balance}"></td>
+
+				</tr>
+
+			</tbody>
+		</table>
+		<a th:href="@{/}">
+			<button class="btn btn-success">Ana sayfa</button>
+		</a>
+		
+	</div>
+
+
+</body>
+</html>

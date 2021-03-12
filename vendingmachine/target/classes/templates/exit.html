@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Vending Machine</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Çıkış</title>
+</head>
+<body>
+
+	<div class="container my-2" align="center">
+
+		<h2>Çıkış yapıldı</h2>
+		<h2 th:text="'İade edilen para miktarı : ' + ${balance}"></h2>
+
+	</div>
+
+</body>
+</html>
